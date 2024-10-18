@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta property="og:image" content="http://xpand.bg/img/thumbnailLogo.png"/>
+    <meta property="og:url" content="http://xpand.bg/index.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Xpand"/>
+    <meta property="og:description" content="A website for xpanded minds"/>
+    <title>Xpand</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="slider_1_0_3.js"></script>
+    <script>
+        function ready(callback) {
+            if (document.readyState !== 'loading') callback();
+            else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+            else document.attachEvent('onreadystatechange', function () {
+                    if (document.readyState === 'complete') callback();
+                });
+        }
+
+        ready(function () {
+            var now = new Date();
+            var daysOfWeek = ['Неделя', 'Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък', 'Събота'];
+            var months = ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември'];
+            var dateToday = (daysOfWeek[now.getDay()] + ', ' + now.getDate() + ' ' + months[now.getMonth()] + ', ' + now.getFullYear()).toUpperCase();
+            document.getElementById('date').innerHTML = dateToday;
+            sliderFunc();
+        });
+    </script>
+    <link rel="stylesheet" href="styles_1_0_3.css">
+</head>
+<body>
+<header class="header">
+    <div class="pre-header">
+        <div class="date" id="date"></div>
+    </div>
+    <div class="main-header">
+        <div class="icons">
+            <img src="img/facebook-icon.png" class="icon">
+            <img src="img/instagram-icon.png" class="icon">
+        </div>
+        <a href="index.html">
+            <img src="img/logo1.png" class="logo">
+        </a>
+    </div>
+</header>
+<div class="menu">
+    <div class="buttons">
+        <a href="index.html">
+            <div class="button">НАЧАЛО</div>
+        </a>
+        <a href="za-nas.html">
+            <div class="button">ЗА НАС</div>
+        </a>
+    </div>
+</div>
+<div class="center">
+    <table class="main-table">
+        <tbody>
+        <tr>
+            <td class="left-td">
+                <div class="slider">
+                    <div class="latest-articles">Избор на редактора</div>
+                    <div class="lds-css ng-scope" style="display:none">
+                        <div class="lds-eclipse">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="demo-cont" style="display:block">
+                        <!-- slider start -->
+                        <div class="slider-on-click" id="slider-on-click" onclick="addSliderHref(this);"></div>
+                        <div class="fnc-slider example-slider">
+                            <div class="fnc-slider__slides">
+                                <!-- slide start -->
+                                <div class="fnc-slide m--blend-green m--active-slide">
+                                    <div class="fnc-slide__inner">
+                                    </div>
+                                </div>
+                                <!-- slide end -->
+                                <!-- slide start -->
+                                <div class="fnc-slide m--blend-dark">
+                                    <div class="fnc-slide__inner">
+                                    </div>
+                                </div>
+                                <!-- slide end -->
+                                <!-- slide start -->
+                                <div class="fnc-slide m--blend-green">
+                                    <div class="fnc-slide__inner">
+                                    </div>
+                                </div>
+                                <!-- slide end -->
+                            </div>
+                            <nav class="fnc-nav">
+                                <div class="fnc-nav__bgs">
+                                    <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+                                    <div class="fnc-nav__bg m--navbg-dark"></div>
+                                    <div class="fnc-nav__bg m--navbg-green"></div>
+                                </div>
+                                <div class="fnc-nav__controls">
+                                    <a href="psychedelics.html">
+                                        <button class="fnc-nav__control">
+                                            <div class="tag">ТАБУ</div>
+                                            <div class="nav__control-date">01 ЮЛИ, 2019</div>
+                                            <div class="slider-heading">Да си поговорим за психоделици</div>
+                                            <span class="fnc-nav__control-progress"></span>
+                                        </button>
+                                    </a>
+                                    <a href="za-imunnata-sistema.html">
+                                        <button class="fnc-nav__control">
+                                            <div class="tag">ЗДРАВЕ</div>
+                                            <div class="nav__control-date">20 ФЕВРУАРИ, 2019</div>
+                                            <div class="slider-heading">Как да превърнем имунитета си в нацепена
+                                                батка?
+                                            </div>
+                                            <span class="fnc-nav__control-progress"></span>
+                                        </button>
+                                    </a>
+                                    <a href="vnimanie-vnimanie.html">"
+                                        <button class="fnc-nav__control">
+                                            <div class="tag">ФОКУС</div>
+                                            <div class="nav__control-date">31 ЯНУАРИ, 2019</div>
+                                            <div class="slider-heading">Внимание, внимание!</div>
+                                            <span class="fnc-nav__control-progress"></span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="latest-articles">Скорошни статии</div>
+                </div>
+
+                <div class="grid-block">
+                    <div class="grid-heading big-heading"><a href="psychedelics.html">Да поговорим за психоделици</a></div>
+                    <a href="psychedelics.html">
+                        <div class="image-wrap psychedelics-pic"></div>
+                    </a>
+                    <div class="grid-content">
+                        <div class="grid-heading small-heading"><a href="psychedelics.html">Да поговорим за психоделици</a></div>
+                        <p class="pubdate">01 Юли, 2019</p>
+                        <p>Как действат върху мозъка ни и какъв е техният терапевтичен потенциал?</p>
+                        <b><a href="psychedelics.html"><p class="readmore">Прочети повече</a></b>
+                    </div>
+                </div>
+
+                <div class="grid-block">
+                    <div class="grid-heading big-heading"><a href="za-imunnata-sistema.html">Как да превърнем
+                        имунитета си в нацепена
+                        батка?</a></div>
+                    <a href="za-imunnata-sistema.html">
+                        <div class="image-wrap batka-pic"></div>
+                    </a>
+                    <div class="grid-content">
+                        <div class="grid-heading small-heading"><a href="za-imunnata-sistema.html">Как да превърнем
+                            имунитета си в
+                            нацепена батка?</a></div>
+                        <p class="pubdate">20 Февруари, 2019</p>
+                        <p>Няколко научно доказани стъпки, които можем да предприемем, за да направим имунната си
+                            система непробиваема. </p>
+                        <b><a href="za-imunnata-sistema.html"><p class="readmore">Прочети повече</a></b>
+                    </div>
+                </div>
+
+                <div class="grid-block">
+                    <div class="grid-heading big-heading"><a href="vnimanie-vnimanie.html">Внимание, внимание!</a>
+                    </div>
+                    <a href="vnimanie-vnimanie.html">
+                        <div class="image-wrap vnimanie-pic"></div>
+                    </a>
+                    <div class="grid-content">
+                        <div class="grid-heading small-heading"><a href="vnimanie-vnimanie.html">Внимание, внимание!</a>
+                        </div>
+                        <p class="pubdate">31 януари, 2019</p>
+                        <p>Или как актът на внимание физически изменя структурата на мозъка и как елементарни медиативни
+                            практики влияят на
+                            мозъчната кора.</p>
+                        <b><a href="vnimanie-vnimanie.html"><p class="readmore">Прочети повече</a></b>
+                    </div>
+                </div>
+
+                <div class="grid-block">
+                    <div class="grid-heading big-heading"><a href="wim-hof-method.html">Методът Wim Hof</a></div>
+                    <a href="wim-hof-method.html">
+                        <div class="image-wrap wim-pic"></div>
+                    </a>
+                    <div class="grid-content">
+                        <div class="grid-heading small-heading"><a href="wim-hof-method.html">Методът Wim Hof</a>
+                        </div>
+                        <p class="pubdate">11 януари, 2019</p>
+                        <p>В тази статия ще разберете как да активирате вътрешния си огън и да бъдете по-здрави,
+                            по-силни и корави. Как
+                            можем да използваме ума, въздуха и студа, за да...</p>
+                        <b><a href="wim-hof-method.html"><p class="readmore">Прочети повече</a></b>
+                    </div>
+                </div>
+
+                <div class="grid-block">
+                    <div class="grid-heading big-heading"><a href="da-se-toplim-bez-toplofikaciya.html">Как да се топлим
+                        без Топлофикация?</a></div>
+                    <a href="da-se-toplim-bez-toplofikaciya.html">
+                        <div class="image-wrap toplo-pic"></div>
+                    </a>
+                    <div class="grid-content">
+                        <div class="grid-heading small-heading"><a href="da-se-toplim-bez-toplofikaciya.html">Как да
+                            се топлим без
+                            Топлофикация?</a></div>
+                        <p class="pubdate">04 януари, 2019</p>
+                        <p>Как да хакнем студа и да променим физиологията си, така че да включим клетъчното парно и да
+                            горим калории, за да
+                            се топлим? Мит? Да, ама не - има начин и той е ...
+                        </p>
+                        <b><a href="da-se-toplim-bez-toplofikaciya.html"><p class="readmore">Прочети повече</a></b>
+                    </div>
+                </div>
+
+
+            </td>
+            <td class="right-td">
+                <div class="latest-articles">Най-популярни</div>
+                <div class="popular-container">
+                    <a href="wim-hof-method.html">
+                        <div class="popular-article wim-pic">
+                            <div class="popular-content">
+                                <div class="table-cell">
+                                    <div class="popular-heading">Методът Wim Hof</div>
+                                    <div class="popular-date">11 януари, 2019</div>
+                                </div>
+                            </div>
+                            <div class="popular-pic">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="za-imunnata-sistema.html">
+                        <div class="popular-article batka-pic">
+                            <div class="popular-content">
+                                <div class="table-cell">
+                                    <div class="popular-heading">Как да превърнем имунитета си в нацепена батка?</div>
+                                    <div class="popular-date">20 февруари, 2019</div>
+                                </div>
+                            </div>
+                            <div class="popular-pic">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="da-se-toplim-bez-toplofikaciya.html">
+                        <div class="popular-article toplo-pic">
+                            <div class="popular-content">
+                                <div class="table-cell">
+                                    <div class="popular-heading">Как да се топлим без Топлофикация?</div>
+                                    <div class="popular-date">04 януари, 2019</div>
+                                </div>
+                            </div>
+                            <div class="popular-pic">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="vnimanie-vnimanie.html">
+                        <div class="popular-article vnimanie-pic">
+                            <div class="popular-content">
+                                <div class="table-cell">
+                                    <div class="popular-heading">Внимание, внимание!</div>
+                                    <div class="popular-date">31 януари, 2019</div>
+                                </div>
+                            </div>
+                            <div class="popular-pic">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

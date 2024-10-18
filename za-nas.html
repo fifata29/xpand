@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta property="og:image" content="http://xpand.bg/img/thumbnailLogo.png"/>
+    <meta property="og:url" content="http://xpand.bg/za-nas"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Xpand: За нас"/>
+    <meta property="og:description" content="Какъв е смисълът на XPAND"/>
+    <title>Xpand</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="styles_1_0_3.css">
+    <script>
+        function ready(callback) {
+            if (document.readyState !== 'loading') callback();
+            else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+            else document.attachEvent('onreadystatechange', function () {
+                    if (document.readyState === 'complete') callback();
+                });
+        }
+
+        ready(function () {
+            var now = new Date();
+            var daysOfWeek = ['Неделя', 'Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък', 'Събота'];
+            var months = ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември'];
+            var dateToday = (daysOfWeek[now.getDay()] + ', ' + now.getDate() + ' ' + months[now.getMonth()] + ', ' + now.getFullYear()).toUpperCase();
+            document.getElementById('date').innerHTML = dateToday;
+        });
+    </script>
+</head>
+<body>
+<header class="header">
+    <div class="pre-header">
+        <div class="date" id="date"></div>
+    </div>
+    <div class="main-header">
+        <div class="icons">
+            <img src="img/facebook-icon.png" class="icon">
+            <img src="img/instagram-icon.png" class="icon">
+        </div>
+        <a href="index.html">
+            <img src="img/logo1.png" class="logo">
+        </a>
+    </div>
+</header>
+<div class="menu">
+    <div class="buttons">
+        <a href="index.html">
+            <div class="button">НАЧАЛО</div>
+        </a>
+        <a href="za-nas.html">
+            <div class="button">ЗА НАС</div>
+        </a>
+    </div>
+</div>
+<div class="top-wrap">
+    <div class="center-wrap">
+    </div>
+    <div class="center-wrap">
+        <div class="article-wrap">
+            <div class="text-heading-wrap">
+                <div class="text-heading">Какъв е смисълът на Xpand.bg?</div>
+            </div>
+            <div class="text-text">
+                Сайтът Xpand.bg е създаден с цел да обогати читателите си с практично научно познание, тъй като в този
+                21 век се намираме в ерата на експоненциално развитие на всички сфери на технологийте. Прогресът се
+                случва със скорост невиждана никога в човешката история и докато се намираме в тази фаза на еволюция на
+                познанието този ръст остава на заден план в обществото заради липсата на комюникация между наука,
+                технологии, бизнес и масовото население. Именно и тук се появява и ролята на Xpand, чиято цел е да
+                свърже колкото се може повече хора с науката и практиките които произлизат от това познание. Това ще
+                допринесе за възможносттс всеки да разполга с различни инструменти да оптимизира човешкия организъм, за
+                да се ускори процеса на учене и развитие.
+
+                Екип XPAND желае максимално голям брой хора да вземат коонтрол над ума, духа и тялото си и така да се
+                увеличи продуктивността на индивида, разширяването на съзнанието и заставането на пътя към най добрата
+                възможна версия която можем да бъдем.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
